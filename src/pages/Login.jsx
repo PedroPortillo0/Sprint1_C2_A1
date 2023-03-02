@@ -1,4 +1,4 @@
-import FormLogin from "../component/atoms/molecules/organism/FormLogin";
+import FormLogin from "../component/organism/FormLogin";
 
 function Login() {
     return ( 
