@@ -1,10 +1,9 @@
 import styled from 'styled-components';
 
 const StyledLabel = styled.label`
-font-weight: bold;
-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-
-
+font-family: Comfortaa;
+ font-size: 24px;
+line-height: 27px;
 
 `;
 
