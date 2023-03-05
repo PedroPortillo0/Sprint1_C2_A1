@@ -3,6 +3,8 @@ import WrapperlInput from "../molecules/WrapperInput";
 import Button from '../atoms/Button';
 import Logo from "../../component/atoms/Logo";
 import Label from '../atoms/Label';
+import Title from '../atoms/title';
+import { Link } from 'react-router-dom';
 const StyledContainer = styled.div` //padre
 width:100%;
 height:100vh;
@@ -17,7 +19,6 @@ justify-content:center;
 align-items:center;
 display:flex;
 flex-direction:column;
-
 `;
 
 const StyledButton = styled.div` //hijo(1,1) lado izquierdo
@@ -60,22 +61,56 @@ flex-direction:column;
 const StyledInputHijo = styled.div` //hijo1(1,2)
     display: flex;
     justify-content: center;
-    height: 50%;
+    height: 70%;
     align-items: flex-start;
     flex-direction: column;
-    width: 50%;
+    width: 70%;
+    border: 2px solid yellow;
 `;
+
 const StyledLogo= styled.div` //hijo(1,2) lado izquierdo
-width:100%;
-height:50%;
+width:150%;
+height:30%;
 display: flex;
 align-items:center;
 flex-direction: column;
 margin-top: 5%;
 
 `;
+const Styledtexto2= styled.div` 
+width:100%;
+height:60%;
+align-items:center;
+flex-direction: column;
+`;
+const Styledtexto1= styled.div` 
+width:100%;
+height:25%;
+align-items:center;
+flex-direction: column;
+`;
+const StyledCrearCuenta= styled.div` 
+width:100%;
+height:20%;
+padding-top: 2%;
 
-
+align-items:center;
+display:flex;
+flex-direction:column;
+`;
+const StyledCrear= styled.div` 
+width:50%;
+height:20%;
+padding-top: 2%;
+`;
+const StyledRecuperar= styled.div` 
+width:50%;
+height:20%;
+padding-top: 2%;
+align-items:center;
+display:flex;
+flex-direction:column;
+`;
 
 
 function GroupInputs({msn}) {
@@ -84,9 +119,15 @@ function GroupInputs({msn}) {
         <StyledContainer>
            
             <StyledInputGroup >
+                <Logo/>
                 <StyledInputHijo>
                     <StyledLogo>
-                        <Logo/>
+                      <Styledtexto1>
+                     <Title  msn=" Hey,hola👋"/>
+                      </Styledtexto1>
+                      <Styledtexto2>
+                      <Label msn ="ㅤTodo ser humano es un artista. El sueño de la vida es crear arte hermoso"/>
+                      </Styledtexto2>
                     </StyledLogo>
                     <WrapperlInput 
                     msn="correo:"
@@ -99,6 +140,14 @@ function GroupInputs({msn}) {
                     <StyledButton>
                     <Button ></Button>
                     </StyledButton> 
+                    <StyledCrearCuenta>
+                        <StyledCrear>
+                        <Label msn=" ¿no tienes cuenta?" /> <Link to="/register"> <label>registrate</label></Link>
+                        </StyledCrear>
+                        <StyledRecuperar>
+                        <Link to="/register"> <label>recuperar contraseña</label></Link>
+                        </StyledRecuperar>
+                    </StyledCrearCuenta>
                 </StyledInputHijo>
             </StyledInputGroup >
     

@@ -1,4 +1,4 @@
-import Label from "../atoms/Label";
+import Title from "../atoms/title";
 import Input from "../atoms/Input";
 import styled from 'styled-components';
 
@@ -9,15 +9,12 @@ display:flex;
 justify-content:center;
 align-items:flex-start;
 flex-direction: column;
-padding-top: 5%;
-
-
 `;
 
 function WrapperlInput({msn,type}) {
     return ( 
         <StyledWrapperInput>
-        <Label msn={msn}/>
+        <Title msn={msn}/>
         <Input type={type}/>
         </StyledWrapperInput>
      );
