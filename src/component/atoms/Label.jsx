@@ -2,8 +2,8 @@ import styled from 'styled-components';
 
 const StyledLabel = styled.label`
 font-family: Comfortaa;
- font-size: 24px;
-line-height: 27px;
+ font-size: 30px;
+line-height: 30px;
 
 `;
 

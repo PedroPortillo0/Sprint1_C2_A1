@@ -3,12 +3,14 @@ import Input from "../atoms/Input";
 import styled from 'styled-components';
 
 const StyledWrapperInput = styled.div`
-width: 70%;
+width: 100%;
+height: 20%;
 display:flex;
 justify-content:center;
 align-items:flex-start;
 flex-direction: column;
-padding-top: 3%;
+padding-top: 5%;
+
 
 `;
 

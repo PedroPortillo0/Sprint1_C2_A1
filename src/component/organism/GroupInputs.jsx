@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 import WrapperlInput from "../molecules/WrapperInput";
 import Button from '../atoms/Button';
-
+import Logo from "../../component/atoms/Logo";
+import Label from '../atoms/Label';
 const StyledContainer = styled.div` //padre
 width:100%;
 height:100vh;
@@ -16,16 +17,19 @@ justify-content:center;
 align-items:center;
 display:flex;
 flex-direction:column;
+
 `;
 
 const StyledButton = styled.div` //hijo(1,1) lado izquierdo
-/* border: 2px solid red; */
-width:50%;
-height: 5%;
+
+width:100%;
+height:10%;
+display: flex;
 justify-content:center;
 align-items:flex-start;
-display:flex;
-flex-direction:column;
+flex-direction: column;
+margin-top: 5%;
+
 `;
 
 const StyledContainerhijo = styled.div` //hijo(2,1) lado derecho
@@ -53,27 +57,51 @@ display:flex;
 flex-direction:column;
 `;
 
-function GroupInputs() {
+const StyledInputHijo = styled.div` //hijo1(1,2)
+    display: flex;
+    justify-content: center;
+    height: 50%;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 50%;
+`;
+const StyledLogo= styled.div` //hijo(1,2) lado izquierdo
+width:100%;
+height:50%;
+display: flex;
+align-items:center;
+flex-direction: column;
+margin-top: 5%;
+
+`;
+
+
+
+
+function GroupInputs({msn}) {
     return (
         //padre
         <StyledContainer>
            
             <StyledInputGroup >
-
-                <WrapperlInput 
-                msn="correo:"
-                type="text">
-                </ WrapperlInput>
-                <WrapperlInput 
-                    msn="contraseña:"
-                    type="password">
-                </ WrapperlInput>
-                <StyledButton>
-                <Button ></Button>
-                </StyledButton>
-                    
+                <StyledInputHijo>
+                    <StyledLogo>
+                        <Logo/>
+                    </StyledLogo>
+                    <WrapperlInput 
+                    msn="correo:"
+                    type="text">
+                    </ WrapperlInput>
+                    <WrapperlInput 
+                        msn="contraseña:"
+                        type="password">
+                    </ WrapperlInput>  
+                    <StyledButton>
+                    <Button ></Button>
+                    </StyledButton> 
+                </StyledInputHijo>
             </StyledInputGroup >
-
+    
                 <StyledContainer2>
                   <StyledContainerhijo>
 
